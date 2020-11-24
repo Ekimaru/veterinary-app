@@ -2,7 +2,8 @@ import React from 'react';
 import { makeStyles} from '@material-ui/core/styles';
 import {CssBaseline} from '@material-ui/core'
 import Header from './components/Header'
-import HiddenApp from './components/Hidden'
+import Login from './components/Login'
+import Services from './components/Servicios/Services'
 
 const useStyles = makeStyles((theme => ({
   root: {
@@ -17,6 +18,9 @@ export default function App() {
   return <div className={classes.root}>
     <CssBaseline />
     <Header />
-    <HiddenApp />
+    <Services />
+    <Login />
+  
+    
   </div>;
 }
