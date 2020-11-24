@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { makeStyles} from '@material-ui/core/styles';
-import { AppBar, IconButton, Toolbar, Box } from '@material-ui/core';
-import SortIcon from '@material-ui/icons/Sort'
+import { AppBar, Toolbar, Box, Collapse} from '@material-ui/core';
 import Logo from './../assets/svg/logo.svg'
+import SimpleMenu from './SimpleMenu'
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -26,7 +27,10 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '4rem',
     },
     logo: {
+
         width: '20%',
+        
+        
     },
     colorText: {
         color: '#5AFF3D',
@@ -42,6 +46,12 @@ const useStyles = makeStyles((theme) => ({
     },
     minititle: {
         fontSize: '3rem',
+    },
+    menuitem: {
+        flexGrow: '1',
+    },
+    hiddenitem: {
+        flexGrow: '1',
 
     }
     
@@ -50,29 +60,33 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
     const classes = useStyles();
+   
     return (
         <div className={classes.root}>
     
         <AppBar className={classes.appbar} elevation={0}>
             <Toolbar>
                 {/* <h1 className={classes.appBarTitle}>Best Friends Veterinary</h1> */}
-                <Box mt={5} ml={2} className={classes.logo}><img src={Logo} alt={classes.logo}/></Box>
-
-                <IconButton>
-                    <Box ml={180}><SortIcon className={classes.icon} /></Box>
-                </IconButton>
+                <Box className={classes.logo}><img src={Logo}/></Box>
+                <Box className={classes.hiddenitem}></Box>
+                <SimpleMenu/>
             </Toolbar>
 
         </AppBar>
+        
+        
+        
 
         <div>
-            <Box mt={15}>
+            
             <h1 className={classes.title}>
                 Welcome to <br/> 
                 <span className={classes.colorText}>Best Friends </span><span className={classes.minititle}>Veterinary</span>
             </h1>
-            </Box>
+            
         </div>
+
+        
 
         </div>
 

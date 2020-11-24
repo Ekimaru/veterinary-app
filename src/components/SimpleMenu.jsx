@@ -4,6 +4,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import SortIcon from '@material-ui/icons/Sort'
 import { makeStyles} from '@material-ui/core/styles';
+import {Link as Scroll} from 'react-scroll';
+import Login from './Login'
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -47,9 +49,14 @@ export default function SimpleMenu() {
       >
         <MenuItem onClick={handleClose}>Home</MenuItem>
         <MenuItem onClick={handleClose}>About</MenuItem>
+        <Scroll to="services" smooth={true}>
         <MenuItem onClick={handleClose}>Services</MenuItem>
+        </Scroll>
         <MenuItem onClick={handleClose}>Shop</MenuItem>
         <MenuItem onClick={handleClose}>Contact</MenuItem>
+        <Scroll to="login" smooth={true}>
+        <MenuItem onClick={handleClose}>Login</MenuItem>
+        </Scroll>
       </Menu>
     </div>
   );
