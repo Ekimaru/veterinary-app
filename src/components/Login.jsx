@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 
@@ -21,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
         TextAlign: 'center',
         alignItems: 'top',
         display: 'flex',
+        margin: '10%',
     },
     content: {
         
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     content2: {
         alignItems: 'center',
         fontFamily: 'Nunito',
-        margin: '13%',
+        margin: '10%',
         background: 'none',
         width: '50',
 
@@ -57,10 +57,11 @@ export default function () {
             console.log(response);
     }
 
-    return <div>
-             <div className={classes.root} id="login">
-             <h1 className={classes.title}>Login</h1>;
+    return <div className={classes.root} id="login">
+
              <div>
+             <h1 className={classes.title}>Login</h1>;
+             </div>
                  <div className={classes.content}><FacebookLogin
                      appId="823378155159729"
                      fields="name,email,picture"
@@ -77,10 +78,10 @@ export default function () {
 
 
              
-             </div>
+             
              </div>
              
-           </div>
+           
        
            
     
