@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { makeStyles} from '@material-ui/core/styles';
-import { AppBar, Toolbar, Box, Collapse} from '@material-ui/core';
-import Logo from './../assets/svg/logo.svg'
-import SimpleMenu from './SimpleMenu'
+import { AppBar, Toolbar, Box} from '@material-ui/core';
+import Logo from './../assets/svg/logo.svg';
+import SimpleMenu from './SimpleMenu';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,9 +30,12 @@ const useStyles = makeStyles((theme) => ({
     logo: {
 
         width: '20%',
-        
-        
     },
+    welcome: {
+        margin: '15%',
+
+    },
+        
     colorText: {
         color: '#5AFF3D',
         fontFamily:'Nunito',
@@ -77,9 +81,9 @@ export default function Header() {
         
         
 
-        <div>
+        <div className={classes.welcome} id="home">
             
-            <h1 className={classes.title}>
+        <h1 className={classes.title}>
                 Welcome to <br/> 
                 <span className={classes.colorText}>Best Friends </span><span className={classes.minititle}>Veterinary</span>
             </h1>
