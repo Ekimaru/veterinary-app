@@ -6,6 +6,10 @@ import ServiceCards from '../../static/ServiceCards'
 const useStyles = makeStyles((theme) => ({
     root: {
         minheight: '100vh',
+        display: 'flex',
+        justifyCOntent:'center',
+        alignItems: 'center',
+        margin: '20px',
         
     },
     title: {
@@ -16,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
         TextAlign: 'center',
         alignItems: 'top',
         display: 'flex',
-        margin: '5%',
+        // margin: '10%',
     },
 
 
@@ -25,12 +29,16 @@ const useStyles = makeStyles((theme) => ({
 export default function () {
     const classes = useStyles();
     return (
-        <div className={classes.root} id="services">
-            <h1 className={classes.title}>Services</h1>
+        <div><h1 className={classes.title} id="services">Services</h1>
+        <div className={classes.root} >
+            
             <ImageCard place={ServiceCards[0]} />
             <ImageCard place={ServiceCards[1]} />
             <ImageCard place={ServiceCards[2]} />
             
+            
+        </div>
         </div>
     );
+
 };
