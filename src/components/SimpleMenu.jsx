@@ -48,18 +48,18 @@ export default function SimpleMenu() {
         onClose={handleClose}
       >
         <Scroll to="home" smooth={true} offset={-300}>
-        <MenuItem onClick={handleClose}>Home</MenuItem>
+        <MenuItem onClick={handleClose}>Inicio</MenuItem>
         </Scroll>
         <Scroll to="about" smooth={true} offset={-100}>
-        <MenuItem onClick={handleClose}>About</MenuItem>
+        <MenuItem onClick={handleClose}>Acerca de Nosotros</MenuItem>
         </Scroll>
         <Scroll to="services" smooth={true} offset={-100}>
-        <MenuItem onClick={handleClose}>Services</MenuItem>
+        <MenuItem onClick={handleClose}>Servicios</MenuItem>
         </Scroll>
-        <MenuItem onClick={handleClose}>Shop</MenuItem>
-        <MenuItem onClick={handleClose}>Contact</MenuItem>
+        <MenuItem onClick={handleClose}>Tienda</MenuItem>
+        <MenuItem onClick={handleClose}>Contáctanos</MenuItem>
         <Scroll to="login" smooth={true} offset={-60}>
-        <MenuItem onClick={handleClose}>Login</MenuItem>
+        <MenuItem onClick={handleClose}>Ingresar</MenuItem>
         </Scroll>
       </Menu>
     </div>

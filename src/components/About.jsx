@@ -2,17 +2,17 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button'
 import CardActionArea from '@material-ui/core/CardActionArea'
-import CardActions from '@material-ui/core/CardActions'
+
+
 
 const useStyles = makeStyles((theme) => ({
 
     root: {
         height: '100vh',
         fontFamily: 'Nunito',
+        
 
     },
     card: {
@@ -49,8 +49,8 @@ const useStyles = makeStyles((theme) => ({
            alignItems: 'center',    
        },
        desc: {
-           fontFamily: 'PT Serif',
-           fontSize: '1.1rem',
+           fontFamily: 'Nunito',
+           fontSize: '1.5rem',
            color: '#ddd',
        }
 }))
@@ -74,18 +74,15 @@ const useStyles = makeStyles((theme) => ({
                     Misión
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
-                Lorem ipsum dolor sit amet consectetur.
+                Nuestra misión está enfocada en establecer un conjunto de técnicas especializadas para todas las mascotas, poder brindarles una calidad de vida sinigual y garantizarle a nuestros clientes calidad y confianza en nuestros servicios.
                 </Typography>
             </CardContent>
         </Card>
 
         <Card className={classes.card}>
             <CardContent>
-                <Typography gutterBottom variant="h5" component= "h2" className={classes.title2}>
-                    Acerca de Nosotros
-                </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
-                Lorem ipsum dolor sit amet consectetur.
+                Nuestro equipo de trabajo está complementado por profesionales de alto empeño y sentido de importancia hacia el bienestar de las mascotas, nos gusta lo que hacemos y lo hacemos con el mayor cariño y amor que merece tu compañero.
                 </Typography>
             </CardContent>
         </Card>
@@ -97,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
                     Visión
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
-                Lorem ipsum dolor sit amet consectetur.
+                Queremos lograr de aquí al año 2030 un renombre en cuanto a lo que se refiere a los cuidados de las mascotas, que seamos una marca celebre con distintos tipos de servicios enfocados tanto en la salud de los animales a cargo del cuidado de las familias, como a actividades de aprendizaje y diversión para todos.
                 </Typography>
             </CardContent>
             </CardActionArea>

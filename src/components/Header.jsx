@@ -84,7 +84,7 @@ export default function Header() {
         <div className={classes.welcome} id="home">
             
         <h1 className={classes.title}>
-                Welcome to <br/> 
+                Bienvenidos a <br/> 
                 <span className={classes.colorText}>Best Friends </span><span className={classes.minititle}>Veterinary</span>
             </h1>
             

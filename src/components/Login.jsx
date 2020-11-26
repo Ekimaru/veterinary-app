@@ -60,17 +60,18 @@ export default function () {
     return <div className={classes.root} id="login">
 
              <div>
-             <h1 className={classes.title}>Login</h1>;
+             <h1 className={classes.title}>Ingresa Ahora</h1>;
              </div>
                  <div className={classes.content}><FacebookLogin
                      appId="823378155159729"
                      fields="name,email,picture"
+                     textButton="Ingresa con Facebook"
                      callback={responseFacebook} />
                  </div>
 
                  <div className={classes.content}> <GoogleLogin
                      clientId="737999626252-fr4jekmervv7uin4eopv2rvcqunp0fl9.apps.googleusercontent.com"
-                     buttonText="LOGIN WITH GOOGLE"
+                     buttonText="Ingresa con Google"
                      onSuccess={responseGoogle}
                      onFailure={responseGoogle}
                      cookiePolicy={'single_host_origin'}/> 
