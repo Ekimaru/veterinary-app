@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea'
+import useWindowPosition from '../hook/useWindowPosition';
 
 
 
@@ -58,7 +59,8 @@ const useStyles = makeStyles((theme) => ({
 
 
     export default function () {
-        const classes= useStyles(); {            
+        const classes= useStyles();
+        const checked = useWindowPosition('header'); {            
          
             return (
             <div className={classes.root} id="about">
@@ -68,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
 
             <div className={classes.content}>
 
-            <Card className={classes.card}>
+            <Card className={classes.card} checked={checked}>
             <CardContent>
                 <Typography gutterBottom variant="h5" component= "h2" className={classes.title2}>
                     Misión
@@ -79,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
             </CardContent>
         </Card>
 
-        <Card className={classes.card}>
+        <Card className={classes.card} checked={checked}>
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p" className={classes.desc}>
                 Nuestro equipo de trabajo está complementado por profesionales de alto empeño y sentido de importancia hacia el bienestar de las mascotas, nos gusta lo que hacemos y lo hacemos con el mayor cariño y amor que merece tu compañero.
