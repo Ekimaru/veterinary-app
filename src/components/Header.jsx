@@ -3,7 +3,7 @@ import { makeStyles} from '@material-ui/core/styles';
 import { AppBar, Toolbar, Box} from '@material-ui/core';
 import Logo from './../assets/svg/logo.svg';
 import SimpleMenu from './SimpleMenu';
-import useWindowPosition from '../hook/useWindowPosition';
+
 
 
 
@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         height: '100vh',
         fontFamily: 'Nunito',
-        [theme.breakpoints.down('md')]: {
-            flexDirection: 'column',
-        },
 
 
     },
@@ -68,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
     const classes = useStyles();
-    const checked = useWindowPosition('header');
+
    
     return (
         <div className={classes.root}>
@@ -88,7 +85,7 @@ export default function Header() {
 
         <div className={classes.welcome} id="home">
             
-        <h1 className={classes.title}checked={checked}>
+        <h1 className={classes.title}>
                 Bienvenidos a <br/> 
                 <span className={classes.colorText}>Best Friends </span><span className={classes.minititle}>Veterinary</span>
             </h1>
