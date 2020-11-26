@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     },
 
     media: {
-     height: 440,
+     height: 500,
+     width: 600,
      
     },
     title: {
@@ -43,7 +44,7 @@ export default function ImageCard({place}) {
                 <CardMedia
                   className={classes.media}
                   image={place.imageUrl}
-                  tittle="General Consultation"
+                  title="General Consultation"
                 />
             <CardContent>
                 <Typography gutterBottom variant="h5" component= "h2" className={classes.title}>
@@ -56,7 +57,7 @@ export default function ImageCard({place}) {
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    Share
+                    Compartir
                 </Button>
             </CardActions>
         </Card>
